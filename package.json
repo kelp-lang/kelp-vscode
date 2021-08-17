@@ -1,0 +1,26 @@
+{
+    "name": "kelp",
+    "displayName": "Kelp",
+    "description": "Kelp language support",
+    "publisher": "kelp-lang",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kelp",
+            "aliases": ["Kelp", "kelp"],
+            "extensions": [".klp", ".kelp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kelp",
+            "scopeName": "source.kelp",
+            "path": "./syntaxes/kelp.tmLanguage.json"
+        }]
+    }
+}

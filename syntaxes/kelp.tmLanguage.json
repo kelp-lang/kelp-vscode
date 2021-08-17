@@ -1,0 +1,44 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Kelp",
+	"patterns": [
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#booleans"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quoted.double.kelp",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.kelp",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.double-slash",
+			"match": "//.*"
+		},
+		"numbers": {
+			"name": "constant.numeric",
+			"match": "([0-9]+(\\.[0-9]+)?)"
+		},
+		"booleans": {
+			"name": "constant.language.boolean",
+			"match": "true|false"
+		}
+	},
+	"scopeName": "source.kelp"
+}
